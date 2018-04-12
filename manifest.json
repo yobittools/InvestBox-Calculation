@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "YoBit InvestBox Calculation",
+  "version": "1.0.0",
+  "icons": {
+    "48": "48x48.jpg"
+  },
+  "background": {
+    "scripts": ["jquery.min.js", "calc.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://yobit.io/*", "https://yobit.net/*"],
+      "js": ["jquery.min.js"]
+    }
+  ],
+  "permissions": [
+    "https://yobit.io/*",
+    "https://yobit.net/*"
+  ],
+  "browser_action": {
+    "default_title": "YoBit InvestBox Calculation",
+    "default_icon": "48x48.jpg",
+    "default_popup": "popup.html"
+  }
+}

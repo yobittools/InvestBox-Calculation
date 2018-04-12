@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YoBit InvestBox Calculation</title>
+    <script src="jquery.min.js"></script>
+    <script src="calc.js"></script>
+    <style>
+        body {padding: 0px;background: #f6f7f8;}
+        input, select {margin: 5px;padding: 0 10px; height:25px; width: 125px;border:1px solid #d9dfe7;border-radius: 2px;font-size: 13px;color: #585858;}
+        input[readonly] {opacity: 0.5;}
+        select {width: 302px;height: 27px; padding: 0 5px;}
+        select[disabled] {opacity:0.5;}
+        td {white-space: nowrap;}
+        button {display: table-cell;padding: 6px 15px;border: none;color: #ffffff;background: #25b02b;margin: 5px;border-radius: 2px;cursor: pointer;}
+        button:hover {opacity: .8;}
+        table#result {border-collapse: collapse;border: 1px solid #e5e5e5;}
+        table#result tbody tr:nth-child(even) {background: #f8f8f8;}
+        table#result tbody tr:nth-child(odd) {background: #ffffff;}
+        table#result td {padding: 2px 5px; border: 1px solid #e5e5e5;}
+        table#result th {background: #465a73; color: #ffffff; font-weight: normal;vertical-align: middle; text-align: left;padding: 2px 5px;}
+    </style>
+</head>
+<body>
+<div style="text-align: center;text-transform: uppercase;color: #5e5e5e;margin-bottom: 10px;"><strong>YoBit InvestBox Calculation</strong></div>
+<div style="width:425px;display:table;">
+    <table width="100%">
+        <tr>
+            <td>Investment Plans</td>
+            <td><select id="plans" disabled><option>Loading...</option></select></td>
+        </tr>
+        <tr>
+            <td>Date Range</td>
+            <td><input type="date" name="startdate" value=""><input type="date" name="enddate" value=""></td>
+        </tr>
+        <tr>
+            <td>Investment Amount</td>
+            <td><input type="text" name="amount" id="amount" value="" required> <button id="calculate">CALCULATE</button></td>
+        </tr>
+    </table>
+
+    <table width="100%" style="margin-top: 10px;" id="result">
+        <thead>
+            <tr>
+                <th width="100">Date</th><th>Amount</th><th>Profit</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+</body>
+</html>
